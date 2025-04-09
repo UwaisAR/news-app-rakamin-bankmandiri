@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         bottomNavigationView = findViewById(R.id.bottomNavigationView)
 
         if (savedInstanceState == null) {
-            loadFragment(OrganizeNewsFragment())
+            loadFragment(HomeFragment())
         }
 
         bottomNavigationView.setOnItemSelectedListener { item ->
