@@ -11,14 +11,84 @@ This project is part of the final task for the **Project-Based Virtual Internshi
 
 ---
 
+## 📚 Table of Contents
+ 
+- [🗂️ Project Structure](#️-project-structure)  
+- [🌟 Key Features](#-key-features)  
+- [⚙️ Technologies & Tools](#️-technologies--tools)  
+- [🚀 How to Run the Project](#-how-to-run-the-project)
+- [👤 Author](#-author)  
+- [📄 License](#-license)  
+- [🛠️ API Key Notes](#️-api-key-notes)  
+
+---
+
+## 🗂️ Project Structure
+
+```
+com.rakamin.bankmandiri.newsapp
+│
+├── 📁 data                  # 📦 Data layer: repositories and local data source
+│   ├── 📁 local             # 🗃️ Room database, DAO classes
+│   └── 📁 repository        # 🔄 Repository classes for fetching and storing data
+│
+├── 📁 model                 # 📑 Data models (e.g. News, Category, etc.)
+│
+├── 📁 network               # 🌐 API services (Retrofit interfaces)
+│
+├── 📁 ui                    # 🎨 Presentation layer (Fragments, Adapters, etc.)
+│   ├── 📁 category          # 🗂️ News by category UI
+│   ├── 📁 detail            # 📖 Detailed news view
+│   ├── 📁 home              # 🏠 Home page, breaking & latest news
+│   ├── 📁 organize          # 📌 Organize/saved news section
+│   ├── 📁 search            # 🔍 Search functionality
+│   ├── 📁 spotlight         # 🌟 Trending/featured news
+│   └── 📁 webview           # 🌐 In-app WebView to display full articles
+│
+├── 📁 utils                 # 🛠️ Utility classes (helpers, extensions, constants)
+│
+├── 🎬 MainActivity.kt       # 🧭 Main navigation container
+└── 🎬 SplashActivity.kt     # 🚀 Splash screen on app start
+```
+
+### 📁 Links:
+- [`data`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/data)
+  - [`local`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/data/local)
+  - [`repository`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/data/repository)
+- [`model`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/model)
+- [`network`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/network)
+- [`ui`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui)
+  - [`category`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui/category)
+  - [`detail`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui/detail)
+  - [`home`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui/home)
+  - [`organize`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui/organize)
+  - [`search`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui/search)
+  - [`spotlight`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui/spotlight)
+  - [`webview`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/ui/webview)
+- [`utils`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/utils)
+- [`MainActivity.kt`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/blob/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/MainActivity.kt)
+- [`SplashActivity.kt`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/blob/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/SplashActivity.kt)
+
+---
+
+Kalau mau langsung dimasukkan ke README, tinggal paste aja dari sini. Butuh tambahan badge, banner, atau auto-index generator juga bisa, tinggal bilang! 💡
+
+
+---
+
 ## 🌟 Key Features
 
 - 🔥 Display **Breaking News** and **Latest News** from trusted sources
-- 🔎 **Search News** by keyword
-- 📌 **Save Favorite Articles**
-- 🧠 **AI-generated Summaries** for long articles
-- 📷 **Modern UI** with dynamic images and color palettes
-- 🔁 **Pull-to-refresh** and smooth loading animations (Shimmer & Lottie)
+- 📂 **Category Menu** for easy navigation through different news topics
+- 🌟 **Spotlight Menu** highlighting featured articles and updates
+- 🔎 **Search News** by keyword for quick access to specific topics also using filter for accurate search
+- 📌 **Save Favorite Articles** for later reading
+- 🧠 **AI-generated Summaries** for long articles, enhancing readability
+- 📷 **Modern UI** with dynamic images, color palettes, and automatic theme adaptation (light/dark mode) based on your device settings for an engaging experience.
+- 🔁 **Pull-to-refresh** and smooth loading animations (Shimmer & Lottie) for seamless browsing
+- 📖 **Detail Page** for in-depth article views after clicking on news items
+- 🤖 **AI Summary Tab** in detail pages for quick insights and highlights
+- 🌐 **Webview Integration** enhances user understanding by providing AI-generated summaries of news content available within the webview.
 
 ---
 
@@ -44,47 +114,23 @@ This project is part of the final task for the **Project-Based Virtual Internshi
 
 1. **Clone this repository**:
    ```bash
-   git clone https://github.com/username/news-app-mandiri-final.git
+   git clone https://github.com/UwaisAR/news-app-mandiri-final.git
    ```
 
 2. **Open the project in Android Studio**
 
-3. **Create a `local.properties` file** in the root directory (if it doesn't exist), and set your SDK path:
-   ```properties
-   sdk.dir=/Users/your-username/Library/Android/sdk
-   ```
-
-4. **Create an `apikey.properties` file** with your API keys from [NewsAPI.org](https://newsapi.org):
-
-   ```properties
-   NEWS_API_KEY=your_news_api_key_here
-   GEMINI_API_KEY=your_gemini_api_key_here
-   ```
-
-5. **Build and run the project** as usual using Android Studio.
+3. **Build and run the project** as usual using Android Studio.
 
 ---
 
-## 📸 Screenshot
-
-![News App Screenshot](image.png)
-
----
 
 ## 👤 Author
 
 > Uwais Alqarani Rachmawan  
-> Final Task – Rakamin x Bank Mandiri  
-> Mobile App Developer Track  
+> Final Task – Rakamin x Bank Mandiri
 
 ---
 
-## 📌 Notes
-
-- Make sure you are connected to the internet when running the application.
-- It is recommended not to push your API keys to the repository. Use `apikey.properties` and configure it via `build.gradle`.
-
----
 
 ## 📄 License
 
@@ -98,9 +144,9 @@ This project is for educational and non-commercial purposes. All APIs and tools 
 If the provided API key on GitHub exceeds its usage limit or stops working, you can replace it by updating your personal key in the `local.properties` file:
 
 ```properties
-NEWS_API_KEY=f5bb08e6620f4aa3a45eef531a06b771
-GEMINI_API_KEY=AIzaSyAOoPu-JwcxrUkoZfbgebxFR3FjApIk5uY
-LOGODEV_API_KEY=pk_ZyrzE-v_SUeNQguveS671w
+NEWS_API_KEY=your_new_api_key_here
+GEMINI_API_KEY=your_new_api_key_here
+LOGODEV_API_KEY=your_new_api_key_here
 ```
 
 After updating the key, make sure to **Clean Project** and then **Rebuild** it from Android Studio to apply the changes.
