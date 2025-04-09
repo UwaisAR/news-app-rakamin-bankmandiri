@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:layout_marginVertical="4dp"
+    android:layout_marginHorizontal="8dp"
+    android:clipToPadding="false"
+    android:theme="@style/Base.Theme.NewsApp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+>
+
+        <!-- Badge Summarized -->
+        <TextView
+            android:id="@+id/tvSummarized"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_summarized_badge"
+            android:padding="4dp"
+            android:text="@string/summarized"
+            android:textSize="12sp"
+            android:visibility="gone"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="8dp"/>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginHorizontal="10dp"
+            app:layout_constraintTop_toBottomOf="@id/tvSummarized"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/ivNewsImage"
+            android:layout_marginTop="4dp">
+
+            <!-- Judul berita -->
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:ellipsize="end"
+                android:text="@string/title"
+                android:fontFamily="@font/poppins_semibold"
+                android:layout_marginTop="4dp"
+                android:textColor="@color/md_theme_outline_highContrast"/>
+
+            <!-- Waktu berita -->
+            <TextView
+                android:id="@+id/tvTimeAgo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/timeago"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/md_theme_outline_highContrast"/>
+
+            <!-- Deskripsi berita -->
+            <TextView
+                android:id="@+id/tvDescription"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:textSize="12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="@string/content"
+                android:justificationMode="inter_word"
+                android:layout_marginTop="2dp"
+                android:paddingBottom="8dp"
+                tools:ignore="VisualLintLongText"
+                tools:targetApi="o"
+                android:textColor="@color/md_theme_outline_highContrast"/>
+        </LinearLayout>
+
+
+        <!-- Gambar berita -->
+        <ImageView
+            android:id="@+id/ivNewsImage"
+            android:layout_width="150dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/news_image"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toStartOf="@+id/btnDelete"
+            app:layout_constraintTop_toTopOf="parent"
+            android:background="@color/md_theme_onSurface"
+            app:layout_constraintBottom_toBottomOf="parent" />
+
+        <!-- Tombol hapus -->
+        <ImageView
+            android:id="@+id/btnDelete"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:background="#93000A"
+            android:contentDescription="@string/expand"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_expand_less"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="ImageContrastCheck" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

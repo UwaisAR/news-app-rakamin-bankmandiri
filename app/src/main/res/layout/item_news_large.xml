@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <!-- Gambar Berita -->
+    <ImageView
+        android:id="@+id/ivNewsImageLarge"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:scaleType="centerCrop"
+        android:contentDescription="@string/news_image"/>
+
+    <!-- Overlay Gradient untuk membuat efek transisi -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/gradient_background"/>
+
+    <!-- Container untuk Teks & Info -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="8dp"
+        android:gravity="bottom">
+
+        <!-- Container untuk Logo & URL -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="4dp">
+
+            <!-- Logo Source (Lingkaran) -->
+            <ImageView
+                android:id="@+id/ivLogoSource"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginEnd="8dp"
+                android:contentDescription="@string/url"
+                android:scaleType="centerCrop"
+                android:background="@drawable/circle_shape"
+                android:clipToOutline="true"
+                tools:targetApi="s" />
+
+            <!-- URL Source -->
+            <TextView
+                android:id="@+id/tvSourceURL"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="@string/url"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/md_theme_outline_highContrast"/>
+        </LinearLayout>
+
+        <!-- Judul Berita -->
+        <TextView
+            android:id="@+id/tvTitleLarge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:maxLines="2"
+            android:ellipsize="end"
+            android:fontFamily="@font/poppins_semibold"
+            android:text="@string/title"
+            android:textColor="@color/md_theme_outline_highContrast"/>
+
+        <!-- Waktu Berita -->
+        <TextView
+            android:id="@+id/tvTimeAgoLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="@string/timeago"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/md_theme_outline_highContrast"/>
+    </LinearLayout>
+
+</FrameLayout>

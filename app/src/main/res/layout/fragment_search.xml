@@ -1,0 +1,97 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/etSearch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/keyword"
+                android:importantForAutofill="no"
+                android:inputType="text"
+                android:padding="12dp"
+                android:fontFamily="@font/nunito_sans_regular"
+                android:background="@drawable/bg_rounded_edittext"
+                tools:ignore="VisualLintTextFieldSize" />
+
+            <ImageButton
+                android:id="@+id/btnClear"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/ic_close"
+                android:background="@null"
+                android:contentDescription="@string/clear_search"
+                app:tint="?attr/colorControlNormal"
+                android:layout_gravity="end|center_vertical" />
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/ivFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_filter"
+            android:contentDescription="@string/show_filters"
+            android:padding="8dp"
+            android:layout_marginStart="8dp"
+            app:tint="?attr/colorControlNormal"
+            android:background="?attr/selectableItemBackgroundBorderless" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/layoutSpinners"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <Spinner
+            android:id="@+id/spinnerCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/CustomSpinnerText"/>
+
+        <Spinner
+            android:id="@+id/spinnerLanguage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/CustomSpinnerText"/>
+
+        <Spinner
+            android:id="@+id/spinnerSortBy"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="@style/CustomSpinnerText"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/search"
+        android:fontFamily="@font/poppins_semibold"
+        tools:ignore="VisualLintButtonSize" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+</LinearLayout>

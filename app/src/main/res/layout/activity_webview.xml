@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/md_theme_surface"
+    android:fitsSystemWindows="true">
+
+
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/md_theme_surface"
+        android:minHeight="?attr/actionBarSize"
+        android:fitsSystemWindows="true">
+
+        <ImageButton
+            android:id="@+id/btnClose"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_close"
+            android:contentDescription="@string/close"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <TextView
+            android:id="@+id/tvUrl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/url"
+            android:fontFamily="@font/nunito_sans_regular"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+            android:textAlignment="center"
+            android:textColor="@color/md_theme_outlineVariant_mediumContrast"/>
+
+        <ImageButton
+            android:id="@+id/btnReload"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_reload"
+            android:contentDescription="@string/reload"
+            android:layout_gravity="center"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+
+
+    <WebView
+        android:id="@+id/webView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomMenu"
+        android:layout_below="@+id/topBar" />
+
+    <LinearLayout
+        android:id="@+id/bottomMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:background="@color/md_theme_surface">
+
+        <ImageButton
+            android:id="@+id/btnBack"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_back"
+            android:contentDescription="@string/back_button"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <ImageButton
+            android:id="@+id/btnNext"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_next"
+            android:contentDescription="@string/next_button"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <ImageButton
+            android:id="@+id/btnSummarize"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_gemini"
+            android:contentDescription="@string/summary"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <ImageButton
+            android:id="@+id/btnShare"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_share"
+            android:contentDescription="@string/share"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+
+        <ImageButton
+            android:id="@+id/btnOpenBrowser"
+            android:layout_width="0dp"
+            android:layout_height="56dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_external_link"
+            android:contentDescription="@string/open_browser"
+            android:background="?attr/selectableItemBackgroundBorderless"/>
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/loadingAnimation"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        app:lottie_rawRes="@raw/loading_animation"
+        android:elevation="10dp"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"/>
+
+    <TextView
+        android:id="@+id/loadingText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/loading_summarize"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/loadingAnimation"
+        android:visibility="gone" />
+
+    <View
+        android:id="@+id/loadingBackground"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/semi_transparent"
+        android:visibility="gone"/>
+
+</RelativeLayout>

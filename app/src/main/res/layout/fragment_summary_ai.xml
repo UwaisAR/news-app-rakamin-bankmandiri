@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Expandable Highlight -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvHighlightTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/highlight"
+                            android:textSize="16sp"
+                            tools:ignore="RelativeOverlap"
+                            android:fontFamily="@font/nunito_sans_bold"
+                            android:textColor="@color/md_theme_outline_highContrast"/>
+
+                        <ImageView
+                            android:id="@+id/ivHighlightToggle"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/expand"
+                            android:src="@drawable/ic_expand_more"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvHighlight"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/highlight"
+                        android:paddingTop="8dp"
+                        android:justificationMode="inter_word"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/md_theme_outline_highContrast"
+                        android:visibility="gone"
+                        tools:targetApi="o" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Expandable Summary -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvSummaryTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/summary"
+                            android:textStyle="bold"
+                            android:textSize="16sp"
+                            tools:ignore="RelativeOverlap"
+                            android:fontFamily="@font/nunito_sans_bold"
+                            android:textColor="@color/md_theme_outline_highContrast"/>
+
+                        <ImageView
+                            android:id="@+id/ivSummaryToggle"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/expand"
+                            android:src="@drawable/ic_expand_more"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvSummary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/summary"
+                        android:paddingTop="8dp"
+                        android:justificationMode="inter_word"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/md_theme_outline_highContrast"
+                        android:visibility="gone"
+                        tools:targetApi="o" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Expandable QnA -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvQnATitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/qna"
+                            android:textSize="16sp"
+                            tools:ignore="RelativeOverlap"
+                            android:fontFamily="@font/nunito_sans_bold"
+                            android:textColor="@color/md_theme_outline_highContrast"/>
+
+                        <ImageView
+                            android:id="@+id/ivQnAToggle"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/expand"
+                            android:src="@drawable/ic_expand_more"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvQnA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/qna"
+                        android:paddingTop="8dp"
+                        android:justificationMode="inter_word"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/md_theme_outline_highContrast"
+                        android:visibility="gone"
+                        tools:targetApi="o" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="4dp">
+                    <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp"
+                    tools:layout_editor_absoluteX="23dp"
+                    tools:layout_editor_absoluteY="228dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/tvSentimentTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/sentiment"
+                            android:textSize="16sp"
+                            tools:ignore="RelativeOverlap"
+                            android:fontFamily="@font/nunito_sans_bold"
+                            android:textColor="@color/md_theme_outline_highContrast"/>
+
+                        <ImageView
+                            android:id="@+id/ivSentimentToggle"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:contentDescription="@string/expand"
+                            android:background="?attr/selectableItemBackgroundBorderless"
+                            android:src="@drawable/ic_expand_more" />
+                    </RelativeLayout>
+
+                    <TextView
+                        android:id="@+id/tvSentiment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="8dp"
+                        android:text="@string/sentiment"
+                        android:justificationMode="inter_word"
+                        android:fontFamily="@font/poppins_regular"
+                        android:textColor="@color/md_theme_outline_highContrast"
+                        android:visibility="gone"
+                        tools:targetApi="o" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
