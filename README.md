@@ -68,12 +68,7 @@ com.rakamin.bankmandiri.newsapp
 - [`utils`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/tree/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/utils)
 - [`MainActivity.kt`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/blob/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/MainActivity.kt)
 - [`SplashActivity.kt`](https://github.com/UwaisAR/news-app-rakamin-bankmandiri/blob/main/app/src/main/java/com/rakamin/bankmandiri/newsapp/SplashActivity.kt)
-
----
-
-Kalau mau langsung dimasukkan ke README, tinggal paste aja dari sini. Butuh tambahan badge, banner, atau auto-index generator juga bisa, tinggal bilang! 💡
-
-
+ 
 ---
 
 ## 🌟 Key Features
